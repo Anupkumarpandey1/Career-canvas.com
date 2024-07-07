@@ -221,8 +221,28 @@ function previewImage(){
         imageDsp.src = ofEvent.target.result;
     }
 }
-
 // print CV
-function printCV(){
+function printCV() {
+    let userData = getUserInputs();
+    displayCV(userData);
+
+    // Optional: Adjust content to fit desired number of pages here
+    adjustContentForPrint();
+
     window.print();
 }
+
+// Optional function to adjust content for print
+function adjustContentForPrint() {
+    // Example: Adding page breaks or adjusting element styles
+    let cvContainer = document.getElementById('cv-container');
+    // Your logic to adjust content for print
+}
+
+
+// print CV
+// function printCV(){
+//     window.print();
+// }
+
+
