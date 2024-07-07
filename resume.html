@@ -8,6 +8,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- custom css -->
         <link rel="stylesheet" href="style.css">
+        <style>
+            @media print {
+                body {
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                nav, .print-btn-sc, .footer, .navbar-brand {
+                    display: none;
+                }
+    
+                @page {
+                    margin: 0;
+                }
+    
+                .container {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                }
+    
+                .print_area {
+                    width: 100%;
+                    page-break-before: auto;
+                    page-break-after: auto;
+                    page-break-inside: avoid;
+                }
+    
+                .print_area * {
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+            }
+            @media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* Hide the navigation bar */
+    nav.navbar {
+        display: none;
+    }
+
+    /* Remove the green background */
+    .preview-cnt-l {
+        background-color: white !important;
+        color: black;
+    }
+
+    /* Remove other elements if needed */
+    .print-btn-sc,
+    .cv-form {
+        display: none;
+    }
+
+    /* General print settings to remove margins and unwanted info */
+    @page {
+        margin: 0;
+    }
+
+    /* Remove the page margins */
+    body {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+        </style>
     </head>
     <body>
         <nav class = "navbar bg-white">
@@ -153,12 +222,12 @@
                                             <div class = "cols-3">
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">Start Date</label>
-                                                    <input name = "exp_start_date" type = "date" class = "form-control exp_start_date" id = "" onkeyup="generateCV()">
+                                                    <input name = "exp_start_date" type = "month" class = "form-control exp_start_date" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">End Date</label>
-                                                    <input name = "exp_end_date" type = "date" class = "form-control exp_end_date" id = "" onkeyup="generateCV()">
+                                                    <input name = "exp_end_date" type = "month" class = "form-control exp_end_date" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
@@ -206,12 +275,12 @@
                                             <div class = "cols-3">
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">Start Date</label>
-                                                    <input name = "edu_start_date" type = "date" class = "form-control edu_start_date" id = "" onkeyup="generateCV()">
+                                                    <input name = "edu_start_date" type = "month" class = "form-control edu_start_date" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
                                                     <label for = "" class = "form-label">End Date</label>
-                                                    <input name = "edu_graduation_date" type = "date" class = "form-control edu_graduation_date" id = "" onkeyup="generateCV()">
+                                                    <input name = "edu_graduation_date" type = "month" class = "form-control edu_graduation_date" id = "" onkeyup="generateCV()">
                                                     <span class="form-text"></span>
                                                 </div>
                                                 <div class = "form-elem">
