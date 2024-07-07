@@ -9,9 +9,26 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <style>
-        
+        /* Add this CSS block in your style.css or within <style> tags in the head */
+.header img {
+    opacity: 0; /* Initially hide the image */
+    transform: translateY(-50px); /* Move the image up initially */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+.header.loaded img {
+    opacity: 1; /* Show the image when loaded */
+    transform: translateY(0); /* Move the image to its original position */
+}
+
 
     </style>
+    <script>
+        window.addEventListener('load', function() {
+            var header = document.querySelector('.header');
+            header.classList.add('loaded');
+        });
+    </script>
     <body>
 
         <nav class = "navbar bg-white">
@@ -110,7 +127,7 @@
                     </div>
                     <div class="section-item">
                         <div class="section-one-l">
-                            <img src="ai-transparency-svgrepo-com.svg" alt="Template">
+                            <img src="cv.png" alt="Template">
                         </div>
                         
                         <h5 class="text-blue-dark">ATS-Compatible</h5>
@@ -118,7 +135,7 @@
                     </div>
                     <div class="section-item">
                         <div class="section-one-l">
-                            <img src="fast-svgrepo-com.svg" alt="Template">
+                            <img src="clock.png" alt="Template">
                         </div>
                         <h5 class="text-blue-dark">Easy and Fast</h5>
                         <p>Our resume builder is intuitive and easy-to-use, with step-by-step guidance and expert tips along the way.</p>
