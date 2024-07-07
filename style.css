@@ -613,3 +613,33 @@ textarea{
     line-height: 1.6; /* Adjust the line height for readability */
     color: #555; /* Adjust the text color */
 }
+.section-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.section-item {
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Adjust max width of each section item */
+    margin-bottom: 20px; /* Space between items */
+}
+
+.section-item img {
+    width: 80px; /* Adjust the size of the icon */
+    height: 80px; /* Adjust the size of the icon */
+    margin-bottom: 10px; /* Add space below the icon */
+}
+
+.section-item h5 {
+    font-size: 18px; /* Adjust the font size of the heading */
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.section-item p {
+    font-size: 16px; /* Adjust the font size of the paragraph */
+    line-height: 1.6; /* Adjust the line height for readability */
+    color: #555; /* Adjust the text color */
+}
+
