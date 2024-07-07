@@ -227,7 +227,7 @@ function printCV() {
     displayCV(userData);
 
     // Optional: Adjust content to fit desired number of pages here
-    adjustContentForPrint(2);
+    adjustContentForPrint();
 
     window.print();
 }
